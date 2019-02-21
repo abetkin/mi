@@ -33,7 +33,7 @@ Run init:
         "migrations_dir": "migrations"
     }
     
-Besides the `--db` option, you can set `$DATABASE_URL` environment variable.
+
 
 
 
