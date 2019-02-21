@@ -55,7 +55,7 @@ Besides the `--db` option, you can set `$DATABASE_URL` environment variable.
 
 - Migrations dependencies
   
-  Migrations are executed in the order of their names. Timestamp is also preserver though
+  Migrations are executed in the order of their names. Timestamp is also preserved though
   
 - Only postresql is supported
 
