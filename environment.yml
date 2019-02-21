@@ -1,0 +1,8 @@
+name: mi
+channels:
+  - defaults
+dependencies:
+  - sqlalchemy
+  - jupyterlab
+  - cached-property
+  - psycopg2
