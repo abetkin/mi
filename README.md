@@ -43,7 +43,7 @@ Besides the `--db` option, you can set `$DATABASE_URL` environment variable.
     All migrations are applied.
 
     $ mi new alter_table
-    0004_alter_table.sql is generated. Please fill it with code and meaning.
+    0004_alter_table.sql is generated. Please fill it with meaning.
 
     $ mi apply
     Applied: 0003.sql
