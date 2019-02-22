@@ -74,7 +74,7 @@ class Mi:
     @classmethod
     def get_last_number(cls, names):
         names = reversed(names)
-        regexp = re.compile(r'^(\d+)(_\w)?.sql')
+        regexp = re.compile(r'^(\d+)(_\w+)?.sql')
         for name in names:
             m = regexp.match(name)
             if not m:
@@ -182,7 +182,7 @@ CREATE TABLE migrations (
             name = f'{num:04d}.sql'
         p = self.dir / name
         p.touch()
-        print(f'{p.absolute()} is generated.')
+        print(f'{p.absolute()} is generated. Please fill it with meaning.')
 
     def do_apply(self):
         unapplied = self.get_unapplied_migrations()
