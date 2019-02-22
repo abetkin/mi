@@ -43,7 +43,7 @@ Run init:
     All migrations are applied.
 
     $ mi new alter_table
-    0004_alter_table.sql is generated. Please fill it with meaning. TODO: print full path
+    0004_alter_table.sql is generated. Please fill it with meaning.
 
     $ mi apply
     Applied: 0003.sql
