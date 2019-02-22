@@ -118,8 +118,7 @@ CREATE TABLE migrations (
             return [
                 self._resolve_name(name) for name in self.args['<name>']
             ]
-        with self.engine.connect() as c:
-            applied = self.exec("SELECT name from migrations")
+        applied = self.exec("SELECT name from migrations")
         applied = [name for (name,) in applied]
         names = [p.name for p in self.files]
         return [
