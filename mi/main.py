@@ -182,7 +182,7 @@ CREATE TABLE migrations (
             name = f'{num:04d}.sql'
         p = self.dir / name
         p.touch()
-        print(f'{name} is generated. Please fill it with meaning.')
+        print(f'{p.absolute()} is generated.')
 
     def do_apply(self):
         unapplied = self.get_unapplied_migrations()
@@ -190,6 +190,9 @@ CREATE TABLE migrations (
             p = self.dir / name
             with p.open() as f:
                 sql = f.read()
+            sql = sql.strip()
+            if not sql.endswith(";"):
+                sql = f"{sql};"
             sql = f'''{sql}\
 
 INSERT INTO migrations VALUES ('{name}');'''
@@ -220,7 +223,7 @@ class ExitError(Exception):
     pass
 
 
-class drop_into_debugger(object):
+class drop_into_debugger:
     def __enter__(self):
         pass
     def __exit__(self, e, m, tb):
