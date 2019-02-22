@@ -123,7 +123,7 @@ CREATE TABLE migrations (
         applied = [name for (name,) in applied]
         names = [p.name for p in self.files]
         return [
-            self._resolve_name(m) for m in names
+            m for m in names
             if m not in applied
         ]
 
