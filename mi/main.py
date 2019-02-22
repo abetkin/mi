@@ -145,11 +145,12 @@ CREATE TABLE migrations (
         migration_dir = d / 'migrations'
         if not migration_dir.exists():
             migration_dir.mkdir()
-        ans = input('Do you want to reuse directory migrations? [y/n]')
-        if ans.strip() != 'y':
-            p = input('Please type the desired directory path: ')
-            migration_dir = Path(p)
-            migration_dir.mkdir()
+        else:
+            ans = input('Do you want to reuse directory migrations? [y/n]')
+            if ans.strip() != 'y':
+                p = input('Please type the desired directory path: ')
+                migration_dir = Path(p)
+                migration_dir.mkdir()
 
         db_url = self.get_db_url()
         conf = {
