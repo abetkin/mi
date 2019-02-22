@@ -5,7 +5,7 @@
     $ mi help 
     mi utility.
 
-    Helps manage migrations in raw sql.
+    Helps to manage migrations in raw sql.
     
     Usage:
       mi init [--db=db]
@@ -43,7 +43,7 @@ Run init:
     All migrations are applied.
 
     $ mi new alter_table
-    0004_alter_table.sql is generated. Please fill it with meaning.
+    0004_alter_table.sql is generated. Please fill it with meaning. TODO: print full path
 
     $ mi apply
     Applied: 0003.sql
